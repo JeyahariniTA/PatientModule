@@ -1,0 +1,35 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server-client   
+  profiles:
+    active: development
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8080   
+    vault:
+      port: 8200
+      host: 127.0.0.1
+      token: 00000000-0000-0000-0000-000000000000
+      scheme: http
+      kv:
+        enabled: true  
+  config:
+    import: vault:// 
+  cache:
+    type: redis
+    redis:
+      cache-null-values: true       
+management:
+  security:
+    enabled:  false
+jwt:
+  secret: harini
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    config-url: /docs/swagger-config
+    url: /docs

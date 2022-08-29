@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "spring.datasourse.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasourse.url'"
+  },
+  {
+    "name": "spring.datasourse.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasourse.username'"
+  },
+  {
+    "name": "spring.datasourse.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasourse.password'"
+  },
+  {
+    "name": "spring.jpa.hibernate.show-sql",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.show-sql'"
+  },
+  {
+    "name": "spring.jpa.hibernate.generate-ddl",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.generate-ddl'"
+  },
+  {
+    "name": "management.security.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'management.security.enabled'"
+  },
+  {
+    "name": "spring.cloud.vault.kv.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.vault.kv.enabled'"
+  }
+]}
