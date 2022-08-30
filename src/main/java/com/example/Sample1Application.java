@@ -47,6 +47,7 @@ public class Sample1Application implements CommandLineRunner {
 		logger.info("config: " + config.getSpringCloudConfigServerGitUri());
 		logger.info("username: " + credentials.getUsername());
 		logger.info("password: " + credentials.getPassword());
+		logger.info("dbusername: " + config.getDbusername());
 	}
 
 }

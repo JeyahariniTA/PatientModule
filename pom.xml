@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Sample-1</artifactId>
+	<artifactId>PatientModule</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Sample-2</name>
-	<description>Demo project for Spring Boot</description>
+	<name>PatientModule</name>
+	<description>Spring Boot Patient Module Project</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud-version>Hoxton.RELEASE</spring-cloud-version>

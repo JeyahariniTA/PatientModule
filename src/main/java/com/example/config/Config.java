@@ -65,6 +65,28 @@ public class Config {
 	@Value("${springdoc.api-docs.path}")
 	private String springDocApiDocsPath;
 
+	@Value("${spring.datasource.username}")
+	String dbusername;
+
+	@Value("${spring.datasource.password}")
+	String dbpassword;
+
+	public String getDbusername() {
+		return dbusername;
+	}
+
+	public void setDbusername(String dbusername) {
+		this.dbusername = dbusername;
+	}
+
+	public String getDbpassword() {
+		return dbpassword;
+	}
+
+	public void setDbpassword(String dbpassword) {
+		this.dbpassword = dbpassword;
+	}
+
 	public String getSpringDocApiDocsPath() {
 		return springDocApiDocsPath;
 	}

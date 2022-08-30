@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   application:
-    name: config-server-client   
+    name: patient-module   
   profiles:
     active: development
   cloud:
@@ -16,8 +16,10 @@ spring:
       scheme: http
       kv:
         enabled: true  
+        backend: tcds/kv/app-name
+        application-name: patient-module
   config:
-    import: vault:// 
+    import: vault://secret/patient-module
   cache:
     type: redis
     redis:
