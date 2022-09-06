@@ -8,4 +8,8 @@ import com.example.model.Patient;
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
+	public Patient getByMedicalRecordNumber(int mrn);
+
+	public boolean existsByMedicalRecordNumber(int mrn);
+
 }

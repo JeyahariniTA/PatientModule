@@ -29,4 +29,6 @@ public interface PatientService {
 
 	public PatientDto partialUpdate(int id, String gender);
 
+	public PatientDto getPatientIdByMedicalRecordNumber(int mrn);
+
 }

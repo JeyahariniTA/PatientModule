@@ -18,11 +18,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class Auditable {
 
 	@CreatedBy
-	@Column(name = "createdBy", columnDefinition = " varchar(50) default  'Harini'", nullable = false, updatable = false)
+	@Column(name = "createdBy", columnDefinition = " varchar(50)", nullable = false, updatable = false)
 	private String createdBy;
 
 	@LastModifiedBy
-	@Column(name = "updatedBy", columnDefinition = "varchar(50) default  'Harini'", nullable = false)
+	@Column(name = "updatedBy", columnDefinition = "varchar(50)", nullable = false)
 	private String updatedBy;
 
 	@CreationTimestamp

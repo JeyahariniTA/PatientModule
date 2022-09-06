@@ -75,13 +75,22 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public PatientDto partialUpdate(int id, String gender) {
-		PatientDto userDto = new PatientDto();
+		PatientDto patientDto = new PatientDto();
 		if (patientRepository.existsById(id)) {
 			Patient patient = patientRepository.findById(id).get();
-			patient.setGender(gender);
-			userDto = patientConverter.convertPatientToDto(patientRepository.save(patient));
+			patient.setSex(gender);
+			patientDto = patientConverter.convertPatientToDto(patientRepository.save(patient));
 		}
-		return userDto;
+		return patientDto;
+	}
+
+	@Override
+	public PatientDto getPatientIdByMedicalRecordNumber(int mrn) {
+		PatientDto dto = new PatientDto();
+		if (patientRepository.existsByMedicalRecordNumber(mrn)) {
+			dto = patientConverter.convertPatientToDto(patientRepository.getByMedicalRecordNumber(mrn));
+		}
+		return dto;
 	}
 
 }

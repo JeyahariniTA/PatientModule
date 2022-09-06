@@ -3,7 +3,7 @@ package com.example;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("example")
-public class Credentials {
+public class VaultCredentials {
 
 	String username;
 	String password;
