@@ -17,6 +17,7 @@ public class VaultConfig {
 
 	@Bean
 	public DataSource getDataSource() {
+		@SuppressWarnings("rawtypes")
 		DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
 		dataSourceBuilder.url("jdbc:mysql://localhost:3306/dbtest");
 		dataSourceBuilder.username(vaultCredentials.getDbusername());

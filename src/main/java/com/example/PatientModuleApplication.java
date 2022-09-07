@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -15,9 +14,9 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import com.example.config.Config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -42,15 +41,11 @@ public class PatientModuleApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PatientModuleApplication.class, args);
-//		System.out.println("message: " + message);
-//		new SpringApplicationBuilder(PatientModuleApplication.class).web(true).run(args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("config: " + config.getSpringCloudConfigServerGitUri());
-		logger.info("username: " + credentials.getUsername());
-		logger.info("password: " + credentials.getPassword());
 		logger.info("dbusername: " + credentials.getDbusername());
 	}
 

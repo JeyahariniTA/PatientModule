@@ -9,9 +9,15 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8080 
+      fail-fast: true
     consul:
       host: localhost
       port: 8500
+      discovery:
+        prefer-ip-address: true
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+        health-check-path: /actuator/health
+        health-check-interval: 1m
     vault:
       port: 8200
       host: localhost
@@ -30,9 +36,6 @@ spring:
 management:
   security:
     enabled:  false
-  health:
-    consul:
-      enabled: false
 jwt:
   secret: harini
 springdoc:
